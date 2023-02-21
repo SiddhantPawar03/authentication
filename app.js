@@ -35,10 +35,10 @@ app.post("/", function(req,res) {
 
     const jsonData = JSON.stringify(data);
     //here we're converting to json format.
-    const url = "https://us21.api.mailchimp.com/3.0/lists/2a7dbe7a28";
+    const url = process.env.url;
     const options = {
         method: "POST",
-        auth: "siddhant1:a0a31a155ddbb4f7a97dd1a89bf55572-us21"
+        auth: process.env.apiKey
     };
     const request = https.request(url, options, function(response) {
         response.on("data", function(data) {
