@@ -12,8 +12,7 @@ app.use(express.static("public"));
 app.get("/", function(req,res) {
     res.sendFile(__dirname + "/signup.html");
 });
-//apikey: a0a31a155ddbb4f7a97dd1a89bf55572-us21
-//audience id: 2a7dbe7a28
+
 app.post("/", function(req,res) {
     const firstname = req.body.firstname;
     const lastname = req.body.lastname;
